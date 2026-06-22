@@ -1,0 +1,155 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #faf8ef;
+  min-height: 100vh;
+}
+
+/* 头部样式 */
+.header {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.title-section {
+  margin-bottom: 20px;
+}
+
+.game-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #776e65;
+  text-align: center;
+}
+
+.score-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.score-box {
+  background-color: #bbada0;
+  border-radius: 6px;
+  padding: 10px 20px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.score-label {
+  font-size: 12px;
+  color: #eee4da;
+  margin-bottom: 5px;
+}
+
+.score-value {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* 棋盘样式 */
+.board {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: #bbada0;
+  border-radius: 6px;
+  margin: 30px 0;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.grid-row {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+
+.grid-cell {
+  flex: 1;
+  background-color: #cdc1b4;
+  border-radius: 3px;
+}
+
+.tiles-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tile-row {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+
+.tile {
+  flex: 1;
+  background-color: #eee4da;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #776e65;
+  transition: all 0.15s ease-in-out;
+}
+
+.tile-value {
+  text-align: center;
+}
+
+/* 按钮样式 */
+.button-section {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 10px 30px;
+  border-radius: 3px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #8f7a66;
+  color: #f9f6f2;
+}
+
+.btn-primary:active {
+  opacity: 0.8;
+}
+
+/* 提示文本 */
+.tips {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.tip-text {
+  color: #9f8772;
+  font-size: 14px;
+}

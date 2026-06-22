@@ -1,0 +1,57 @@
+<view class="container">
+  <!-- 标题和分数 -->
+  <view class="header">
+    <view class="title-section">
+      <view class="game-title">2048</view>
+    </view>
+    <view class="score-section">
+      <view class="score-box">
+        <view class="score-label">得分</view>
+        <view class="score-value">{{score}}</view>
+      </view>
+      <view class="score-box">
+        <view class="score-label">最高分</view>
+        <view class="score-value">{{bestScore}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 游戏棋盘 -->
+  <view class="board" bindtouchstart="onTouchStart" bindtouchend="onTouchEnd">
+    <view class="grid-container">
+      <view wx:for="{{4}}" wx:key="index" class="grid-row">
+        <view wx:for="{{4}}" wx:key="index" class="grid-cell"></view>
+      </view>
+    </view>
+    <view class="tiles-container">
+      <view 
+        wx:for="{{board}}" 
+        wx:for-index="i" 
+        wx:for-item="row" 
+        wx:key="i"
+        class="tile-row"
+      >
+        <view 
+          wx:for="{{row}}" 
+          wx:for-index="j" 
+          wx:for-item="tile" 
+          wx:key="j"
+          class="tile"
+          style="background-color: {{getTileColor(tile)}}; opacity: {{tile ? 1 : 0}}"
+        >
+          <view class="tile-value" wx:if="{{tile}}">{{tile}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 按钮 -->
+  <view class="button-section">
+    <button class="btn btn-primary" bindtap="restartGame">新游戏</button>
+  </view>
+
+  <!-- 操作提示 -->
+  <view class="tips">
+    <view class="tip-text">← �� ↑ ↓ 滑动控制方向</view>
+  </view>
+</view>
